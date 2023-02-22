@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Seat Booking Project</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+
+  <body>
+    <div class="big-container flex justify-center items-center min-h-screen">
+      <div class="flex-row justify-center">
+        <h1 class="flex justify-center text-2xl mb-4">Movie Seat Booking Project</h1>
+        <!-- APP CONTAINER-->
+        <div class="container w-[400px] space-y-6 p-6 bg-[#e0f2fe] rounded">
+          <!-- MOVIE MENU -->
+          <div class="movie-menu flex justify-center items-center">
+            <label for="movies">Pick a movie:</label>
+            <select name="movies" id="movies" class="p-[3px]">
+              <option value="10">Movie 1 ($10)</option>
+              <option value="12">Movie 2 ($12)</option>
+              <option value="9">Movie 3 ($9)</option>
+              <option value="13">Movie 4 ($13)</option>
+            </select>
+          </div>
+
+          <!-- SEATING LEGEND -->
+          <div class="seating-legend">
+            <ul class="flex list-none justify-evenly">
+              <li class="flex justify-center items-center">
+                <div class="seat"></div>
+                <small>Available</small>
+              </li>
+              <li class="flex justify-center items-center">
+                <div class="seat selected"></div>
+                <small>Selected</small>
+              </li>
+              <li class="flex justify-center items-center">
+                <div class="seat occupied"></div>
+                <small>Occupied</small>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SCREEN -->
+          <div class="flex justify-center items-center">
+            <div class="screen flex justify-center items-center h-[60px] w-[120px] border-solid border border-black">
+              SCREEN
+            </div>
+          </div>
+          <!-- SEATS -->
+          <div class="seat-container flex justify-center items-center">
+            <div class="seat-container">
+              <div class="row flex">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row flex">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row flex">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+              </div>
+              <div class="row flex">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row flex">
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+            </div>
+          </div>
+          <!-- CONFIRM MESSAGE -->
+          <div class="confirm-message flex justify-center bg-[#10b981] p-2 rounded">
+            <p>You have selected <span id="count">0</span> seat(s) for a price of $<span id="price-total">0</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
